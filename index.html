@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html ng-app="ConsultaCEP" ng-controller="headCtrl">
+<head>
+	<title>{{title}}</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="controller/appCtrl.js"></script>
+	<script type="text/javascript" src="service/CepService.js"></script>
+	<script type="text/javascript" src="directive/cep.js"></script>
+
+</head>
+<body ng-controller="mainCtrl">
+
+	<br>
+	<br>
+	<h1 style="margin-left: 30px; margin-bottom: 30px"><span class="label label-primary">{{hello}}</span></h1>
+
+	<form class="form-horizontal" name="form" novalidate>
+
+		<div class="form-group">
+			<label for="cep" class="col-sm-2 control-label">CEP</label>
+			<div class="col-sm-5">
+				<input type="text" class="form-control" id="cep" placeholder="cep" cep ng-model="cep">
+			</div>
+			<span class="label label-danger" ng-model="erro" ng-show="exibeaviso">{{erro}}</span>
+		</div>
+
+		<div class="form-group">
+			<label for="logradouro" class="col-sm-2 control-label">Logradouro</label>
+			<div class="col-sm-5">
+				<input type="text" class="form-control" id="logradouro" placeholder="logradouro" ng-model="logradouro" disabled>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="bairro" class="col-sm-2 control-label">Bairro</label>
+			<div class="col-sm-5">
+				<input type="text" class="form-control" id="bairro" placeholder="bairro" ng-model="bairro" disabled>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="cidade" class="col-sm-2 control-label">Cidade</label>
+			<div class="col-sm-5">
+				<input type="text" class="form-control" id="cidade" placeholder="cidade" ng-model="cidade" disabled>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="estado" class="col-sm-2 control-label">Estado</label>
+			<div class="col-sm-5">
+				<input type="text" class="form-control" id="estado" placeholder="estado" ng-model="estado" disabled>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-offset-2 col-sm-10">
+				<button type="submit" class="btn btn-success">Salvar</button>
+			</div>
+		</div>
+	</form>
+
+</body>
+</html>
