@@ -2,6 +2,8 @@
 <html ng-app="ConsultaCEP" ng-controller="headCtrl">
 <head>
 	<title>{{title}}</title>
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="-1">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<script type="text/javascript" src="js/angular.min.js"></script>
 	<script type="text/javascript" src="controller/appCtrl.js"></script>
@@ -20,7 +22,7 @@
 		<div class="form-group">
 			<label for="cep" class="col-sm-2 control-label">CEP</label>
 			<div class="col-sm-5">
-				<input type="text" class="form-control" id="cep" placeholder="cep" cep ng-model="cep">
+				<input type="text" class="form-control" id="cep" placeholder="cep" cep ng-model="cep" autocomplete="off">
 			</div>
 			<span class="label label-danger" ng-model="erro" ng-show="exibeaviso">{{erro}}</span>
 		</div>
